@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             header("Location: ../index.php");
             exit;
         } else {
-            echo("Error: " . $stmt->error);
+            echo("Error: " .$stmt->error);
         }
     } else {
         echo("Error preparing statement: " . $conn->error);

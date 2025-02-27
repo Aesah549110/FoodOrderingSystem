@@ -1,11 +1,9 @@
 <?php
-include './database/database.php'; // Include database connection
+include './database/database.php'; 
 
-// Check if ID is set in the URL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Fetch order details
     $stmt = $conn->prepare("SELECT * FROM orders WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
@@ -21,13 +19,11 @@ if (isset($_GET['id'])) {
     exit;
 }
 
-// Handle form submission for updating the order
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $food_name = $_POST['food_name'];
     $customer_name = $_POST['customer_name'];
     $order_status = $_POST['order_status'];
 
-    // Update query
     $stmt = $conn->prepare("UPDATE orders SET food_name=?, customer_name=?, order_status=? WHERE id=?");
     $stmt->bind_param("sssi", $food_name, $customer_name, $order_status, $id);
 
@@ -51,9 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="container mt-5">
     <h2>Edit Food Order</h2>
 
-    <!-- Back to Orders Button -->
     <a href="index.php" class="btn btn-secondary mb-3">Back to Orders</a>
-
+     
     <form action="" method="POST">
         <div class="mb-3">
             <label for="food_name" class="form-label">Food Name:</label>

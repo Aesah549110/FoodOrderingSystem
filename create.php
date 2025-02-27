@@ -1,13 +1,11 @@
 <?php
-include './database/database.php'; // Include the database connection
+include './database/database.php';
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $food_name = $_POST['food_name'];
     $customer_name = $_POST['customer_name'];
     $order_status = $_POST['order_status'];
 
-    // Prepare SQL statement to prevent SQL injection
     $stmt = $conn->prepare("INSERT INTO orders (food_name, customer_name, order_status) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $food_name, $customer_name, $order_status);
 
@@ -31,8 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="container mt-5">
     <h2>Add New Food Order</h2>
 
-    <!-- Back to Orders Button -->
-    <a href="index.php" class="btn btn-secondary mb-3">Back to Orders</a>
+   <a href="index.php" class="btn btn-secondary mb-3">Back to Orders</a>
 
     <form action="create.php" method="POST">
         <div class="mb-3">
