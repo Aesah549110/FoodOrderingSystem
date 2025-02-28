@@ -120,15 +120,15 @@ include './helpers/authenticated.php';
           <?php if (!empty($row['food_name'])): ?>
             <p class="food-details"><strong>Food Name:</strong> <?= htmlspecialchars($row['food_name']); ?></p>
           <?php endif; ?>
-          <?php if (!empty($row['costumer_name'])): ?>
-            <p class="food-details"><strong>Customer Name:</strong> <?= htmlspecialchars($row['costumer_name']); ?></p>
+          <?php if (!empty($row['customer_name'])): ?>
+            <p class="food-details"><strong>Customer Name:</strong> <?= htmlspecialchars($row['customer_name']); ?></p>
           <?php endif; ?>
           <?php if (!empty($row['order_status'])): ?>
             <p class="food-details"><strong>Order Status:</strong> <?= htmlspecialchars($row['order_status']); ?></p>
           <?php endif; ?>
-          <div class="movie-action-btns">
+          <div class="orders-action-btns">
             <a href="update.php?id=<?= $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
-            <a href="../handlers/delete_handler.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+            <a href="./handlers/delete_handler.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
           </div>
         </div>
       <?php endwhile; ?>
@@ -137,9 +137,10 @@ include './helpers/authenticated.php';
     <?php endif; ?>
   </div>
 
-  <a href="../handlers/logout_handler.php" class="btn btn-danger logout-btn">
+  <a href="./handlers/logout_handler.php" class="btn btn-danger logout-btn">
     Logout <i class="fa-solid fa-right-from-bracket"></i>
   </a>
 
 </body>
 </html>
+
