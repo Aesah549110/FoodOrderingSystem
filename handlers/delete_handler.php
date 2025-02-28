@@ -9,7 +9,7 @@ $stmt->bind_param("i", $id);
 
 
 if ($stmt->execute()) {
-   header("Location: ../index.php"); 
+   header("Location: ../home.php"); 
    exit;
 } else {
     echo "Error deleting record: ";
