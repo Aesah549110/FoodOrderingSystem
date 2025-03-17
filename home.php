@@ -1,5 +1,5 @@
 <?php
-include './database/database.php'; // Ensure this file establishes $conn properly
+include './database/database.php'; 
 
 // Fetch orders from database
 $res = $conn->query("SELECT * FROM orders");
@@ -17,8 +17,8 @@ $res = $conn->query("SELECT * FROM orders");
 
   <style>
   body {
-      background: url('food-pattern.png'); /* Use a subtle food-related image */
-      background-color: #F8EDE3; /* Soft beige for a cozy feel */
+      background: url('food-pattern.png'); 
+      background-color: #F8EDE3; 
       background-size: cover;
       font-family: 'Arial', sans-serif;
 }
@@ -28,7 +28,6 @@ $res = $conn->query("SELECT * FROM orders");
       margin: auto;
     }
 
-    /* Header */
     .header {
       margin-bottom: 20px;
     }
@@ -55,7 +54,6 @@ $res = $conn->query("SELECT * FROM orders");
       background-color: #A71D31;
     }
 
-    /* Order Cards */
     .food-card {
       background: #FFF5E1;
       border-radius: 12px;
@@ -82,7 +80,6 @@ $res = $conn->query("SELECT * FROM orders");
       color: #555;
     }
 
-    /* Buttons */
     .orders-action-btns {
       margin-top: 10px;
       display: flex;
@@ -125,7 +122,6 @@ $res = $conn->query("SELECT * FROM orders");
       border-radius: 8px;
     }
 
-    /* Logout Button */
     .logout-btn {
       display: block;
       width: 200px;
