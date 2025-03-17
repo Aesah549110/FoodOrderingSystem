@@ -8,94 +8,143 @@ include './helpers/not_authenticated.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Food Ordering Management</title>
+  <title>Food Orders System - Sign Up</title>
   <link href="statics/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="statics/js/bootstrap.bundle.min.js"></script>
+  
   <style>
-    body {
-      background: linear-gradient(to right, red 50%, url('statics/images/food-background.jpg') 50%) no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: brightness(0.8);
-      padding: 20px;
-    }
-    .card {
-      width: 320px; /* Further decreased width */
-      padding: 25px; /* Adjusted padding */
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .form-label {
-      font-size: 0.9rem; /* Smaller label size */
-      font-weight: bold;
-      color: #E44D26;
-      margin-bottom: 5px;
-    }
-    .form-control {
-      font-size: 0.9rem; /* Smaller input size */
-      padding: 8px;
-      border-radius: 5px;
-    }
-    .btn-custom {
-      background: #E44D26;
-      border: none;
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 5px;
-      transition: 0.3s;
-      margin-top: 8px;
-    }
-    .btn-custom:hover {
-      background: #c0392b;
-    }
-    .alert {
-      font-size: 0.85rem;
-      border-radius: 5px;
-    }
-    .text-highlight {
-      color: #E44D26;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-    .login-title {
-      font-size: 1.6rem; /* Smaller title size */
-      font-weight: bold;
-    }
-    .spacer {
-      margin-bottom: 12px;
-    }
+   /* Background - Warm & inviting */
+   body {
+    background: url('food-pattern.png') no-repeat center center;
+    background-size: cover;
+    background-color: #F8EDE3; /* Soft beige for a cozy feel */
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+   }
+
+/* Card Container */
+.card {
+  width: 550px;
+  padding: 25px;
+  border-radius: 12px;
+  background: #FFF7E6; /* Light cream */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  text-align: center;
+  border: 1px solid #FFD9A0; /* Subtle border */
+}
+
+/* Title */
+.login-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #D72638; /* Red */
+  margin-bottom: 5px;
+}
+
+/* Subtext */
+.subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+/* Form Labels */
+.form-label {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FF8C42; /* Orange */
+  text-align: left;
+  display: block;
+}
+/* Input Fields */
+.form-control {
+  font-size: 1rem;
+  padding: 10px;
+  width: 90%;
+  border-radius: 6px;
+  border: 2px solid #A7C957; /* Green border */
+  background: #FFF;
+  transition: 0.3s;
+}
+.form-control:focus {
+  border-color: #FF8C42; /* Highlight orange */
+  box-shadow: 0 0 5px rgba(255, 140, 66, 0.5);
+  outline: none;
+}
+/* Button */
+.btn-custom {
+  background: #D72638; /* Appetizing red */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+  width: 95%;
+}
+.btn-custom:hover {
+  background: #A71D31; /* Darker red */
+}
+/* Sign In Link */
+.signup-link {
+  font-size: 1rem;
+  color: #4CAF50; /* Green */
+  font-weight: bold;
+  text-decoration: none;
+}
+.signup-link:hover {
+  text-decoration: underline;
+}
+/* Small Text */
+.text-center small {
+  color: #555;
+  font-size: 0.9rem;
+}
+/* Spacing */
+.mb-3 {
+  margin-bottom: 15px;
+}
+.d-grid {
+  margin-top: 20px;
+}
+.text-center.mt-3 {
+  margin-top: 15px;
+}
+
   </style>
 </head>
 
 <body>
   <div class="container">
     <div class="col-md-6 mx-auto">
-      <div class="text-center mb-3">
-        <h1 class="login-title text-white">🍕 Create Account</h1>
-        <p class="text-light">Fill in the details to get started</p>
+      <div class="text-center ">
+        <h1 class="login-title">🍽️ Create Account 🎉</h1>
+        <p class="subtext">Sign up to continue</p>
       </div>
       <div class="card">
         <?php if (!empty($_SESSION['errors'])): ?>
-          <div class="alert alert-danger text-center spacer">
+          <div class="alert alert-danger text-center">
             <?php echo $_SESSION['errors']; unset($_SESSION['errors']); ?>
           </div>
         <?php endif; ?>
+
         <form action="handlers/register_handler.php" method="POST" novalidate>
-          <div class="mb-2">
+          <div class="mb-3">
             <label class="form-label">Username</label>
             <input type="text" class="form-control" name="username" required />
           </div>
-          <div class="mb-2">
+          <div class="mb-3">
             <label class="form-label">Password</label>
             <input type="password" class="form-control" name="password" required />
           </div>
-          <div class="mb-2">
+          <div class="mb-3">
             <label class="form-label">Confirm Password</label>
             <input type="password" class="form-control" name="confirm_password" required />
           </div>
@@ -105,8 +154,9 @@ include './helpers/not_authenticated.php';
             </button>
           </div>
         </form>
-        <div class="text-center mt-2">
-          <small>Already have an account? <a href="index.php" class="text-highlight text-decoration-none">Login</a></small>
+
+        <div class="text-center mt-3">
+          <small>Already have an account? <a href="index.php" class="signup-link">Sign In</a></small>
         </div>
       </div>
     </div>
