@@ -40,7 +40,7 @@ $order = $query->fetch_assoc();
 
   label {
     font-weight: bold;
-    color: #D35400; /* Orange */
+    color: #D35400; 
     display: block;
     text-align: left;
     margin-bottom: 6px;
