@@ -15,11 +15,10 @@ include './helpers/not_authenticated.php';
   <script src="statics/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    /* Background */
 body {
   background: url('food-pattern.png') no-repeat center center;
   background-size: cover;
-  background-color: #F8EDE3; /* Soft beige for a cozy feel */
+  background-color: #F8EDE3; 
   font-family: 'Arial', sans-serif;
   height: 100vh;
   display: flex;
@@ -28,60 +27,54 @@ body {
   margin: 0;
 }
 
-/* Card */
 .card {
-  width: 400px; /* Slightly reduced for better proportions */
+  width: 400px;
   padding: 30px;
   border-radius: 14px;
-  background: #FEF5E7; /* Soft cream */
+  background: #FEF5E7;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 1);
   border: none;
 }
 
-/* Title */
 .login-title {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
-  color: #E60B20; /* Improved red color */
+  color: #E60B20;
 }
 
-/* Icons */
 .title-icon {
   font-size: 1rem;
   vertical-align: middle;
   margin-right: 10px;
 }
 
-/* Labels */
 .form-label {
   font-size: 1rem;
   font-weight: bold;
-  color: #FF8C42; /* Orange */
+  color: #FF8C42; 
   margin-bottom: 5px;
 }
 
-/* Input Fields */
 .form-control {
   font-size: 1rem;
   padding: 10px;
   border-radius: 6px;
-  border: 2px solid #C5E17A; /* Improved for contrast */
-  background: #F4F8E8; /* Light background */
+  border: 2px solid #C5E17A; 
+  background: #F4F8E8; 
   outline: none;
   width: 90%;
   transition: 0.2s ease-in-out;
 }
 
 .form-control:focus {
-  border-color: #FF8C42; /* Highlight input on focus */
+  border-color: #FF8C42;
   box-shadow: 0 0 5px rgba(255, 140, 66, 0.5);
 }
 
-/* Login Button */
 .btn-custom {
-  background: #D72638; /* Red */
+  background: #D72638;
   border: none;
   color: white;
   font-size: 1rem;
@@ -97,7 +90,6 @@ body {
   background: #A71D31;
 }
 
-/* Sign Up Link */
 .text-highlight {
   color: #4CAF50; 
   font-weight: bold;
@@ -108,12 +100,10 @@ body {
   text-decoration: underline;
 }
 
-/* Centering */
 .text-center {
   text-align: center;
 }
 
-/* Spacing */
 .mb-3 {
   margin-bottom: 15px;
 }
@@ -122,7 +112,6 @@ body {
   margin-top: 20px;
 }
 
-/* Responsive Fix */
 @media (max-width: 480px) {
   .card {
     width: 90%;
