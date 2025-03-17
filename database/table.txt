@@ -8,4 +8,12 @@ CREATE TABLE orders (
     customer_name VARCHAR(30) NOT NULL,
     order_status ENUM('Pending', 'Preparing', 'Completed') DEFAULT 'Pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+    
 );
+
+CREATE TABLE IF NOT EXISTS users (
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(100) NOT NULL,
+        password LONGTEXT NOT NULL
+        );
