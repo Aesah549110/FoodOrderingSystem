@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <style>
         body {
-            background: url('food-pattern.png'); /* Use a subtle food-related image */
-            background-color: #F8EDE3; /* Soft beige for a cozy feel */
+            background: url('food-pattern.png');
+            background-color: #F8EDE3;
             background-size: cover;
             font-family: 'Arial', sans-serif;
             height: 100vh;
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .form-container {
-            background-color: #FFF5D1; /* Light yellowish container */
+            background-color: #FFF5D1;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
