@@ -1,7 +1,6 @@
 <?php
-include './database/database.php'; // Ensure this file establishes $conn properly
+include './database/database.php';
 
-// Fetch order data (modify if needed)
 $id = $_GET['id'] ?? '';
 $query = $conn->query("SELECT * FROM orders WHERE id = '$id'");
 $order = $query->fetch_assoc();
@@ -18,8 +17,8 @@ $order = $query->fetch_assoc();
 
   <style>
      body {
-  background: url('food-pattern.png'); /* Use a subtle food-related image */
-  background-color: #F8EDE3; /* Soft beige for a cozy feel */
+  background: url('food-pattern.png');
+  background-color: #F8EDE3; 
   background-size: cover;
   font-family: 'Arial', sans-serif;
 }
@@ -55,7 +54,7 @@ $order = $query->fetch_assoc();
     border: 1px solid #ccc;
     font-size: 16px;
     display: block;
-    box-sizing: border-box; /* Prevents width issues */
+    box-sizing: border-box; 
   }
 
   textarea {
@@ -63,7 +62,6 @@ $order = $query->fetch_assoc();
     height: 80px;
   }
 
-  /* Button Container for Proper Spacing */
   .btn-container {
     display: flex;
     flex-direction: column;
@@ -71,9 +69,8 @@ $order = $query->fetch_assoc();
     margin-top: 10px;
   }
 
-  /* Update Order Button */
   .btn-update {
-    background-color: #C72C41; /* Red */
+    background-color: #C72C41;
     color: white;
     font-weight: bold;
     padding: 12px;
@@ -90,9 +87,9 @@ $order = $query->fetch_assoc();
     background-color: #A71D31;
   }
 
-  /* Back to Orders Button (Same Size as Update Order) */
+ 
   .btn-back {
-    background-color: #6C757D; /* Dark Gray */
+    background-color: #6C757D; 
     color: white;
     font-weight: bold;
     padding: 10px;
