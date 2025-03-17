@@ -14,11 +14,10 @@ include './helpers/not_authenticated.php';
   <script src="statics/js/bootstrap.bundle.min.js"></script>
   
   <style>
-   /* Background - Warm & inviting */
    body {
     background: url('food-pattern.png') no-repeat center center;
     background-size: cover;
-    background-color: #F8EDE3; /* Soft beige for a cozy feel */
+    background-color: #F8EDE3; 
     font-family: 'Arial', sans-serif;
     height: 100vh;
     display: flex;
@@ -28,58 +27,54 @@ include './helpers/not_authenticated.php';
 
    }
 
-/* Card Container */
 .card {
   width: 550px;
   padding: 25px;
   border-radius: 12px;
-  background: #FFF7E6; /* Light cream */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  background: #FFF7E6;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
   text-align: center;
-  border: 1px solid #FFD9A0; /* Subtle border */
+  border: 1px solid #FFD9A0; 
 }
 
-/* Title */
 .login-title {
   font-size: 2.3rem;
   font-weight: bold;
-  color: #D72638; /* Red */
+  color: #D72638;
   margin-bottom: 5px;
 }
 
-/* Subtext */
 .subtext {
   font-size: 1rem;
   color: #666;
   margin-bottom: 20px;
 }
-/* Form Labels */
 .form-label {
   margin-bottom: 10px;
   font-size: 1rem;
   font-weight: bold;
-  color: #FF8C42; /* Orange */
+  color: #FF8C42;
   text-align: left;
   display: block;
 }
-/* Input Fields */
+
 .form-control {
   font-size: 1rem;
   padding: 10px;
   width: 90%;
   border-radius: 6px;
-  border: 2px solid #A7C957; /* Green border */
+  border: 2px solid #A7C957; 
   background: #FFF;
   transition: 0.3s;
 }
 .form-control:focus {
-  border-color: #FF8C42; /* Highlight orange */
+  border-color: #FF8C42; 
   box-shadow: 0 0 5px rgba(255, 140, 66, 0.5);
   outline: none;
 }
-/* Button */
+
 .btn-custom {
-  background: #D72638; /* Appetizing red */
+  background: #D72638;
   border: none;
   color: white;
   font-size: 1.2rem;
@@ -90,24 +85,24 @@ include './helpers/not_authenticated.php';
   width: 95%;
 }
 .btn-custom:hover {
-  background: #A71D31; /* Darker red */
+  background: #A71D31; 
 }
-/* Sign In Link */
+
 .signup-link {
   font-size: 1rem;
-  color: #4CAF50; /* Green */
+  color: #4CAF50;
   font-weight: bold;
   text-decoration: none;
 }
 .signup-link:hover {
   text-decoration: underline;
 }
-/* Small Text */
+
 .text-center small {
   color: #555;
   font-size: 0.9rem;
 }
-/* Spacing */
+
 .mb-3 {
   margin-bottom: 15px;
 }
